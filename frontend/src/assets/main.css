@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------
+   Global Base Style
+-------------------------------- */
+
+html,
+body,
+#app {
+  padding: 0;
+  @apply bg-gray-200;
+}
+
+/* 기본 outline 제거 */
+button:focus,
+input:focus,
+a:focus {
+  outline: none;
+}
+
+button:hover,
+input:hover,
+a:hover {
+  outline: none;
+}
+
+/* 키보드 접근성 유지 (중요) */
+button:focus-visible,
+input:focus-visible,
+a:focus-visible {
+  @apply ring-2 ring-gray-900/20;
+}
+
+/* ------------------------------
+   Button / Input Reset
+-------------------------------- */
+@layer base {
+  button {
+    outline: none;
+    border: none;
+    box-shadow: none;
+    background-image: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  button:hover,
+  button:active,
+  button:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
